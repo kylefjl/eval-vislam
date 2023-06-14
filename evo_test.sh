@@ -9,8 +9,10 @@ function red_echo(){
     echo -e "\033[31m $1 \033[0m"
 }
 green_echo "Open the EVO server..."
-data_path="/media/kyle/Mydata/data/slam_test/"
-result_path="/media/kyle/Mydata/slam_test_result/"
+##################################################################
+data_path="/media/kyle/Mydata/data/slam_test/"  #  数据集路径 必须有解压下来的 groundtruth eg /media/kyle/Mydata/data/slam_test/C0_test/groundtruth
+result_path="/media/kyle/Mydata/slam_test_result/"  #  slam结果路径 slam 输出结果 要求命名 slam_test_result/C0/vins_result_loop.txt
+##########################################################
 
 evo_result_path=${result_path}evo_result.txt
 if [ ! -f "$evo_result_path" ]; then
