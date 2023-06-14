@@ -27,6 +27,8 @@ Arguments:
   <fix scale>     Set to 1 for VISLAM, set to 0 for VSLAM.
 ```
 
+evo_test.sh 和evo.sh 脚本为对vi 比赛数据集结果进行批量评估的脚本，**里面有用到evo_traj 进行画图**，
+
 ### Initialization Scale Error and Time
 
 ```docopt
