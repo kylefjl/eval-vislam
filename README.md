@@ -63,6 +63,10 @@ Arguments:
   <has inertial>  Set to 1 for VISLAM, set to 0 for VSLAM.
 ```
 
+
+
+evo_traj tum CameraTrajectory_TUM.txt groundtruth.txt -p
+
 ## Citation
 
 If you are using our codebase or dataset for research, please cite the following publication:

@@ -363,11 +363,20 @@ struct ViconCsv {
         }
     }
 
+//    void save(const std::string &filename) const {
+//        if (FILE *csv = fopen(filename.c_str(), "w")) {
+//            fputs("#t[s:double],q.x[double],q.y[double],q.z[double],q.w[double],p.x[m:double],p.y[m:double],p.z[m:double]\n", csv);
+//            for (auto item : items) {
+//                fprintf(csv, "%.14e,%.9e,%.9e,%.9e,%.9e,%.9e,%.9e,%.9e\n", item.t, item.q.x(), item.q.y(), item.q.z(), item.q.w(), item.p.x(), item.p.y(), item.p.z());
+//            }
+//            fclose(csv);
+//        }
+//    }
     void save(const std::string &filename) const {
         if (FILE *csv = fopen(filename.c_str(), "w")) {
-            fputs("#t[s:double],q.x[double],q.y[double],q.z[double],q.w[double],p.x[m:double],p.y[m:double],p.z[m:double]\n", csv);
+            //fputs("#t[s:double],p.x[m:double],p.y[m:double],p.z[m:double],q.x[double],q.y[double],q.z[double],q.w[double]\n", csv);
             for (auto item : items) {
-                fprintf(csv, "%.14e,%.9e,%.9e,%.9e,%.9e,%.9e,%.9e,%.9e\n", item.t, item.q.x(), item.q.y(), item.q.z(), item.q.w(), item.p.x(), item.p.y(), item.p.z());
+                fprintf(csv, "%.14e %.9e %.9e %.9e %.9e %.9e %.9e %.9e\n", item.t,  item.p.x(), item.p.y(), item.p.z(),item.q.x(), item.q.y(), item.q.z(), item.q.w());
             }
             fclose(csv);
         }

@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
     cam_dataset.load(dataset_root + "/camera");
     imu_dataset.load(dataset_root + "/imu");
     vic_dataset.load(dataset_root + "/groundtruth"); // gt has same format to vicon
+    vic_dataset.data.save(dataset_root + "/groundtruth/data.txt");
 
     auto [gt_trajectory, in_trajectory] = get_synchronized_data(input_filename, vic_dataset, cam_dataset, imu_dataset);
 
