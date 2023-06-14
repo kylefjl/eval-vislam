@@ -33,7 +33,7 @@ Arguments:
 #### .sh 使用
 - run_vins.sh 
   - 参数1 ：`data_path`   数据集路径 必须有解压下来的 groundtruth **要求命令**：  slam_test/C0_test/groundtruth
-  -  参数2 ：`result_path` slam结果路径 slam 输出结果 **要求命名** slam_test_result/C0/vins_result_loop.txt
+  - 参数2 ：`result_path` slam结果路径 slam 输出结果 **要求命名** slam_test_result/C0/vins_result_loop.txt
 
 ### Initialization Scale Error and Time
 
